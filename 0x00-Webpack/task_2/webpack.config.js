@@ -29,5 +29,18 @@ module.exports = {
                 ],
             }
         }),
-    ]
+        new ImageMinimizerPlugin({
+            minimizerOptions: {
+              plugins: [
+                ['optipng', { optimizationLevel: 5 }],
+                ['mozjpeg', { progressive: true, quality: 80 }],
+                ['gifsicle', { interlaced: true, optimizationLevel: 3 }],
+                ['svgo', { plugins: [{ removeViewBox: false }] }],
+              ],
+            },
+          }),
+    ],
+    performance: {
+        hints: false
+    },
 };
