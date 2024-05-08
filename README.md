@@ -1,1 +1,0 @@
-### This directory contains files for my Alx-react tasks.

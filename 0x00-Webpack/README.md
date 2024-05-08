@@ -1,1 +1,0 @@
-### This directory contains files for my ALX 0x00-Webpack tasks.
