@@ -1,0 +1,25 @@
+.App {
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 18px;
+}
+
+.App-logo {
+  height: 35vh;
+}
+.App-header {
+  display: flex;
+  border-bottom: 2px solid rgb(212, 37, 37);
+}
+.App-header h1 {
+  color: rgb(212, 37, 37);
+  font-size: 2rem;
+  margin: auto 2rem;
+}
+.App-body {
+  height: 100vh;
+}
+.App-footer {
+  font-style: italic;
+  border-top: 2px solid rgb(212, 37, 37);
+}
