@@ -1,11 +1,11 @@
 import React from 'react'
 
-const NotificationItem = () => {
+const NotificationItem = ({ type, html, value }) => {
   return (
-    <div>
-      
-    </div>
+    <li data-notification-type={type} dangerouslySetInnerHTML={html}>
+      { value }
+    </li>
   )
 }
 
-export default NotificationItem
+export default NotificationItem;

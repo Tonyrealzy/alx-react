@@ -7,13 +7,14 @@ describe('Notifications', () => {
         shallow(<Notifications />);
     });
 
-    it('renders three lists', () => {
-        const wrapper = shallow(<Notifications />);
-        expect(wrapper.find('li')).toHaveLength(3);
+    it('renders three NotificationItem elements', () => {
+        const wrapper = shallow(<Notifications displayDrawer />);
+        expect(wrapper.find(NotificationItem)).toHaveLength(3);
     });
 
     it('renders the text "Here is the list of notifications"', () => {
-        const wrapper = shallow(<Notifications />);
-        expect(wrapper.text()).toContain('Here is the list of notifications');
+        const wrapper = shallow(<Notifications displayDrawer />);
+        const firstNotificationItem = wrapper.find(NotificationItem).first();
+        expect(firstNotificationItem.props().html).toEqual({ __html: '<strong>Urgent requirement</strong>'});
     });
 });
