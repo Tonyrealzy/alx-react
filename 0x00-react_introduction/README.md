@@ -1,0 +1,1 @@
+### This directory contains project files for my ALX 0x00-react_introduction tasks.
