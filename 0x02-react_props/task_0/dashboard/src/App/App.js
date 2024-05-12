@@ -10,13 +10,19 @@ function App() {
   return (
     <>
       <Notifications />
-
+      
       <div className="App">
-        <Header />
-        
-        <Login />
+        <div className='App-header'>
+          <Header />
+        </div>
 
-        <Footer />
+        <div className='App-body'>
+          <Login />
+        </div>
+
+        <div className='App-footer'>
+          <Footer />
+        </div>
       </div>
     </>
   );
