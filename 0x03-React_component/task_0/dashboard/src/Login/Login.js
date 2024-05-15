@@ -6,6 +6,7 @@ function Login() {
     <div className='App-body'>
     <p>Login to access the full dashboard</p>
     <aside>
+      <form>
         <label htmlFor='email'>
         Email:
         </label>
@@ -17,6 +18,7 @@ function Login() {
         <input type='password' id='password' />
 
         <button>OK</button>
+      </form>
     </aside>
     </div>
   );

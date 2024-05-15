@@ -2,6 +2,7 @@ import React from 'react';
 import CourseListRow from './CourseListRow';
 import './CourseList.css';
 import PropTypes from 'prop-types';
+import CourseShape from './CourseShape';
 
 
 const CourseList = ({ listCourses }) => {
