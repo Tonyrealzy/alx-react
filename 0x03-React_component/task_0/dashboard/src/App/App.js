@@ -7,12 +7,6 @@ import Footer from '../Footer/Footer';
 import CourseList from '../CourseList/CourseList';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isLoggedIn: this.props.isLoggedIn
-    };
-  }
 
   render() {
     const listCourses = [
@@ -31,7 +25,7 @@ class App extends Component {
           </div>
   
           <div className='App-body'>
-            {this.state.isLoggedIn ? <CourseList listCourses={listCourses}/> : <Login/>}
+            {this.props.isLoggedIn ? <CourseList listCourses={listCourses}/> : <Login/>}
           </div>
   
           <div className='App-footer'>

@@ -1,0 +1,17 @@
+.App-body {
+height: 100vh;
+text-align: left;
+padding: 2rem;
+}
+.App-body #email, #password {
+padding: 0.5rem;
+margin: 0.5rem 1rem;
+border: 0.1px solid grey;
+outline: none;
+}
+.App-body button {
+padding: 0.5rem 1rem;
+margin: 0.5rem 1rem;
+border: 0.1px solid grey;
+border-radius: 5px;
+}
