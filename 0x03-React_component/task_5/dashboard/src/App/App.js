@@ -8,6 +8,7 @@ import CourseList from '../CourseList/CourseList';
 import BodySectionWithMarginBottom from '../BodySection/BodySectionWithMarginBottom';
 import BodySection from '../BodySection/BodySection';
 import '../BodySection/BodySectionWithMarginBottom.css';
+import PropTypes from 'prop-types';
 
 
 class App extends Component {
@@ -74,7 +75,7 @@ class App extends Component {
 }
 
 App.defaultProps = {
-  logout: () => {}
+  logout: PropTypes.func
 };
 
 
