@@ -76,7 +76,7 @@ App.propTypes = {
 };
 
 App.defaultProps = {
-  logout: () => {}
+  logout: () => {},
 };
 
 export default App;

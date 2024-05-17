@@ -57,11 +57,11 @@ class App extends Component {
 }
 
 App.propTypes = {
-  logout: PropTypes.func
+  logout: PropTypes.func,
 };
 
 App.defaultProps = {
-  logout: () => {}
+  logout: () => {},
 };
 
 export default App;

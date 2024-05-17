@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import Notifications from '../Notifications/Notifications';
 import Login from '../Login/Login';
@@ -25,6 +25,7 @@ class App extends Component {
   };
 
   render() {
+
     const listCourses = [
       {id: 1, name: 'ES6', credit: 60},
       {id: 2, name: 'Webpack', credit: 20},
@@ -56,11 +57,11 @@ class App extends Component {
 }
 
 App.propTypes = {
-  logout: PropTypes.func
+  logout: PropTypes.func,
 };
 
 App.defaultProps = {
-  logout: () => {}
+  logout: () => {},
 };
 
 export default App;
