@@ -18,4 +18,17 @@ describe('WithLogging Component', () => {
         const TestComponent = WithLogging(() => <p/>);
         const wrapper = mount(<TestComponent/>);
 
-        expect(consoleSpy).t
+        expect(consoleSpy).toHaveBeenCalledWith('Component Component is mounted');
+        wrapper.unmount();
+        expect(consoleSpy).toHaveBeenCalledWith('Component Component is going to unmount');
+    });
+
+    it('logs "Login" on mount and unmount when wrapped element is a React component', () => {
+        const LoginWithLogging = WithLogging(Login);
+        const wrapper = mount(<LoginWithLogging/>);
+
+        expect(consoleSpy).toHaveBeenCalledWith('Login Login is mounted');
+        wrapper.unmount();
+        expect(consoleSpy).toHaveBeenCalledWith('Login Login is going to unmount');
+    });
+});

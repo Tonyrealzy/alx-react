@@ -7,6 +7,8 @@ import Footer from '../Footer/Footer';
 import CourseList from '../CourseList/CourseList';
 import BodySectionWithMarginBottom from '../BodySection/BodySectionWithMarginBottom';
 import BodySection from '../BodySection/BodySection';
+import '../BodySection/BodySectionWithMarginBottom.css';
+
 
 class App extends Component {
 
@@ -54,7 +56,7 @@ class App extends Component {
             </BodySectionWithMarginBottom>
             }
             <div>
-              <BodySection title='News from the School' />
+              <BodySection title='News from the School' children='Exciting things are happening at our school this month! Our science fair showcased incredible projects from students across all grades, with innovative experiments and groundbreaking research. The sports teams have also been on a winning streak, bringing home multiple championships. Additionally our school has introduced new extracurricular activities, including a coding club and a gardening program, to further enrich student learning and engagement. Stay tuned for more updates and achievements in the coming weeks!' />
             </div>
           </div>
   

@@ -39,6 +39,40 @@ describe('Notifications', () => {
     const wrapper = shallow(<Notifications displayDrawer={true} />);
     expect(wrapper.find('.Notifications')).toHaveLength(1);
     });
+
+    it('does not rerender when updating props with the same list', () => {
+        const listNotifications = [
+            {id: 1, type: 'default', value: 'New course available'},
+            {id: 2, type: 'urgent', value: 'New resume available'}
+        ];
+
+        const wrapper = shallow(<Notifications listNotifications={listNotifications} />);
+        const instance = wrapper.instance();
+        jest.spyOn(instance, 'render');
+        wrapper.setProps({ listNotifications });
+
+        expect(instance.render).toHaveBeenCalledTimes(1);
+    });
+
+    it('rerenders when updating props with a longer list', () => {
+        const listNotifications = [
+            {id: 1, type: 'default', value: 'New course available'},
+            {id: 2, type: 'urgent', value: 'New resume available'}
+        ];
+
+        const longerListNotifications = [
+            {id: 1, type: 'default', value: 'New course available'},
+            {id: 2, type: 'urgent', value: 'New resume available'},
+            {id: 3, type: 'default', value: 'New notification available'},
+        ];
+
+        const wrapper = shallow(<Notifications listNotifications={listNotifications} />);
+        const instance = wrapper.instance();
+        jest.spyOn(instance, 'render');
+        wrapper.setProps({ longerListNotifications });
+
+        expect(instance.render).toHaveBeenCalledTimes(2);
+    });
     
     test('markAsRead function is called with the correct id', () => {
         const mockConsoleLog = jest.spyOn(console, 'log').mockImplementation(() => {});
