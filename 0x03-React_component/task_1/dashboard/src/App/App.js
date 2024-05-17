@@ -55,7 +55,7 @@ class App extends Component {
 }
 
 App.defaultProps = {
-  logout: () => {}
+  logout: PropTypes.func
 };
 
 
