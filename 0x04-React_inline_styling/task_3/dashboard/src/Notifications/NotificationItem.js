@@ -35,6 +35,8 @@ NotificationItem.propTypes = {
 
 const styles = StyleSheet.create({    
   li: {
+    borderBottom: '2px solid black',
+    paddingBottom: '10px',
     default: {
         color: 'blue'
     },

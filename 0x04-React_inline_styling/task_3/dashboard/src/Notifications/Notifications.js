@@ -58,8 +58,8 @@ class Notifications extends Component {
 
 const styles = StyleSheet.create({
     Notifications: {
-        padding: '1rem',
-        border: '1px dotted rgb(212, 37, 37)'
+        border: '1px dotted rgb(212, 37, 37)',
+        width: '100%'
     },    
     right: {
         float: 'right',
