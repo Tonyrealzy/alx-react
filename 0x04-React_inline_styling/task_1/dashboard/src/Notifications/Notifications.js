@@ -86,4 +86,4 @@ Notifications.defaultProps = {
     listNotifications: []
 };
 
-exp
+export default Notifications; 
