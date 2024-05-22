@@ -1,0 +1,10 @@
+.App-header {
+display: flex;
+width: 100%;
+border-bottom: 2px solid rgb(212, 37, 37);
+}
+.App-header h1 {
+color: rgb(212, 37, 37);
+font-size: 2rem;
+margin: auto 2rem;
+}
