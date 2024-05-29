@@ -10,4 +10,5 @@ const obj = {
 
 const immutableMap = getImmutableObject(obj);
 console.log(immutableMap);
+// console.log(JSON.stringify(immutableMap, null, 2));
 console.log("Is Immutable: ", isImmutable(immutableMap));
