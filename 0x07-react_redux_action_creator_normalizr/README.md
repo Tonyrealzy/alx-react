@@ -1,0 +1,1 @@
+### This directory contains project files for my ALX 0x07-react_redux_action_creator_normalizr tasks.
