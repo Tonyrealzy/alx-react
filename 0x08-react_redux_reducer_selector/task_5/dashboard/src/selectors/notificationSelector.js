@@ -11,4 +11,5 @@ export const getNotifications = (state) => {
 export const getUnreadNotifications = createSelector(
   getNotifications,
   (notifications) =>
-    notifications.filter((notification) => !notification.get("isRe
+    notifications.filter((notification) => !notification.get("isRead"))
+);
