@@ -14,7 +14,7 @@ import {
   loginRequest,
 } from "../actions/uiActionCreators";
 
-export const mapStateToProps = (state) => {
+const mapStateToProps = (state) => {
   return {
     isLoggedIn: state.ui.get("isUserLoggedIn"),
     displayDrawer: state.ui.get("isNotificationDrawerVisible"),
@@ -42,7 +42,6 @@ class App extends Component {
     };
     this.logIn = this.logIn.bind(this);
     this.logOut = this.logOut.bind(this);
-    this.markNotificationAsRead = this.markNotificationAsRead.bind(this);
   }
 
   logIn(email, password) {
@@ -63,14 +62,6 @@ class App extends Component {
         isLoggedIn: false,
       },
     });
-  }
-
-  markNotificationAsRead(id) {
-    this.setState((prevState) => ({
-      listNotifications: prevState.listNotifications.filter(
-        (notification) => notification.id !== id
-      ),
-    }));
   }
 
   componentDidMount() {
@@ -111,8 +102,6 @@ class App extends Component {
         <article>
           <Notifications
             displayDrawer={this.state.displayDrawer}
-            listNotifications={this.state.listNotifications}
-            markNotificationAsRead={this.markNotificationAsRead}
           />
 
           <div className={css(styles.app)}>
